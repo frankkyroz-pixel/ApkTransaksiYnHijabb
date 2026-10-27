@@ -1,0 +1,2 @@
+// Halaman: onb
+V.onb=function(){return[`<div class="mid"><h1 style="font-size:28px">Nyaman dalam<br>Setiap Ibadah</h1><p class="mu" style="margin:10px 0 20px">Mukena elegan dengan bahan premium untuk kenyamanan maksimal.</p><div class="img card" style="width:100%;height:240px;font-size:90px;background:linear-gradient(135deg,#f6e8de,#e9c4bd)">🧕</div><button class="btn" onclick="go('login')">Mulai Belanja</button><p class="mu" style="margin-top:12px;cursor:pointer" onclick="go('login')">Lewati</p></div>`]};

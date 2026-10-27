@@ -1,0 +1,8 @@
+// Halaman: home
+V.home=function(){return[`<div class="hd"><span style="font-size:20px">☰</span><div class="t ser" style="font-size:24px">YN Hijab</div>${cartBtn()}</div>
+<div style="background:var(--pk);padding:0 16px 14px"><input class="in" style="margin:0" placeholder="🔍 Cari mukena, warna, atau koleksi..." onfocus="go('list',{cat:'Semua'})"></div>
+<div class="pad"><div class="card row" style="background:linear-gradient(135deg,#fff,var(--soft));padding:18px"><div style="flex:1"><h2 style="font-size:20px">Koleksi Elegan<br>Untuk Ibadahmu</h2><p class="mu" style="margin:6px 0 10px">Nyaman dipakai, cantik dipandang.</p><button class="btn s" onclick="go('list',{cat:'Semua'})">Belanja Sekarang</button></div><div style="font-size:60px">🧕</div></div>
+<div class="hs" style="margin:6px 0 14px">${['🚚 Pengiriman Cepat','✨ Produk Berkualitas','💵 COD & Transfer'].map(t=>`<div class="chip on" style="background:var(--soft);color:var(--br);border:0">${t}</div>`).join('')}</div>
+<div class="row sp"><h3>Kategori Pilihan</h3><span class="mu" onclick="tab('cats')">Lihat semua ›</span></div><div class="hs" style="margin:10px 0 14px">${CATS.map(([c,i])=>`<div class="cat" onclick="go('list',{cat:'${c}'})"><i>${i}</i>${c}</div>`).join('')}</div>
+<div class="grid" style="margin-bottom:16px"><div class="card" style="margin:0;background:var(--soft)"><div class="mu">Diskon hingga</div><h2 style="color:var(--pk2);font-size:26px">30%</h2></div><div class="card" style="margin:0;background:var(--soft)"><div class="mu">Gratis Ongkir</div><b>Min. Belanja Rp150.000</b></div></div>
+<h3 style="margin-bottom:10px">Produk Terlaris</h3><div class="grid">${P.slice(0,4).map(card).join('')}</div></div>`,'home']};

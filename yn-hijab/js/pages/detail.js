@@ -1,0 +1,6 @@
+// Halaman: detail
+V.detail=function(){const p=pr(S.pid),c=S.col||Object.keys(p.cols)[0];return[hdr('Detail Produk',cartBtn())+`${img(p,260)}<div class="pad"><div class="row sp"><h2 style="font-size:22px">${p.n}</h2><button class="ib" style="color:var(--pk2)" onclick="tf(${p.id})">${S.fav.has(p.id)?'♥':'♡'}</button></div><div class="pr" style="font-size:20px">${rp(p.p)}</div><div class="mu">★ ${p.r} · Terjual ${p.s}+ · Stok tersedia: 24</div>
+<h3 style="margin:16px 0 8px;font-size:15px">Pilih Warna: ${c}</h3><div class="row">${Object.entries(p.cols).map(([k,v])=>`<div class="sw ${k==c?'on':''}" style="background:${v}" onclick="S.col='${k}';draw()"></div>`).join('')}</div>
+<h3 style="margin:16px 0 6px;font-size:15px">Deskripsi</h3><p class="mu">Bahan premium yang lembut, jatuh, dan nyaman dipakai sepanjang hari. Cocok untuk ibadah dan bepergian.</p>
+<div class="row sp" style="margin:16px 0"><b>Jumlah</b><div class="qty"><button onclick="S.qty=Math.max(1,S.qty-1);draw()">−</button><span>${S.qty}</span><button onclick="S.qty=Math.min(24,S.qty+1);draw()">+</button></div></div>
+<div class="row"><button class="btn o" onclick="add(${p.id},'${c}',${S.qty})">+ Keranjang</button><button class="btn" onclick="add(${p.id},'${c}',${S.qty});S.h.push('detail');go('checkout')">Beli Sekarang</button></div></div>`]};

@@ -1,0 +1,2 @@
+// Halaman: list
+V.list=function(){const l=list();return[hdr(S.cat=='Semua'?'Semua Produk':S.cat,cartBtn())+`<div class="pad"><input class="in" placeholder="🔍 Cari produk" value="${S.q}" oninput="S.q=this.value;draw(1)" id="q"><div class="hs" style="margin-bottom:12px">${['Terbaru','Terlaris','Harga ↑'].map(s=>`<div class="chip ${S.sort==s?'on':''}" onclick="S.sort='${s}';draw()">${s}</div>`).join('')}</div>${l.length?`<div class="grid">${l.map(card).join('')}</div>`:'<div class="empty">Produk tidak ditemukan 🌸</div>'}</div>`]};

@@ -1,0 +1,2 @@
+// Halaman: cats
+V.cats=function(){return[`<div class="hd"><div class="t ser">Kategori</div></div><div class="pad"><div class="grid">${CATS.map(([c,i])=>`<div class="card row" style="margin:0;cursor:pointer" onclick="go('list',{cat:'${c}'})"><span style="font-size:28px">${i}</span><div><b>${c}</b><div class="mu">${P.filter(p=>p.c==c).length} produk</div></div></div>`).join('')}</div></div>`,'cats']};
